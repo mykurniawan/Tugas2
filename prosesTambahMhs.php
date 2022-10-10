@@ -4,6 +4,7 @@ if ($_POST) {
     $nim = $_POST['nim'];
     $alamat = $_POST['alamat'];
     $username = $_POST['username'];
+    $password = PASSWORD_HASH($_POST['password'], PASSWORD_DEFAULT);
 
     if (empty($nama)) {
         echo "<script>alert('nama mahasiswa tidak boleh kosong'); location.href='tambahMhs.php'</script>";
@@ -11,8 +12,8 @@ if ($_POST) {
         echo "<script>alert('nama nim tidak boleh kosong'); location.href='tambahMhs.php'</script>";
     } else {
         include "koneksi.php";
-        $insert = mysqli_query($conn, "INSERT INTO t_mahasiswa (nama, nim, alamat, username)
-        value (' " . $nama . " ',' " . $nim . " ',' " . $alamat . " ','" . $username . "')") or die(mysqli_error($koneksi));
+        $insert = mysqli_query($conn, "INSERT INTO t_mahasiswa (nama, nim, alamat, username, password)
+        value (' " . $nama . " ',' " . $nim . " ',' " . $alamat . " ','" . $username . "','" . $password . "')") or die(mysqli_error($koneksi));
 
         if ($insert) {
             echo "<script>alert('Sukses menambahkan data mahasiswa');location.href='dataMhs.php'</script>";
