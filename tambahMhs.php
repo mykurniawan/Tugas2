@@ -21,6 +21,8 @@
             <input type="text" name="alamat" value="" class="form-control"> <br>
             Username :
             <input type="text" name="username" value="" class="form-control"> <br>
+            Password :
+            <input type="password" name="password" value="" class="form-control"> <br>
 
             <!-- button  -->
             <input type="submit" name="simpan" value="Tambah Mahasiswa" class="btn btn-primary">
