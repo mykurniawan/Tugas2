@@ -26,6 +26,7 @@
                     <th>NIM</th>
                     <th>ALAMAT</th>
                     <th>USERNAME</th>
+                    <th>PASSWORD</th>
                     <th>AKSI</th>
                 </tr>
             </thead>
@@ -43,6 +44,7 @@
                         <td><?= $data_mahasiswa['nim'] ?></td>
                         <td><?= $data_mahasiswa['alamat'] ?></td>
                         <td><?= $data_mahasiswa['username'] ?></td>
+                        <td><?= $data_mahasiswa['password'] ?></td>
                         <td>
                             <a href="edit.php?id_mahasiswa= <?= $data_mahasiswa['id_mahasiswa'] ?>" class="btn btn-success">Edit</a> |
                             <a href="hapus.php?id_mahasiswa= <?= $data_mahasiswa['id_mahasiswa'] ?>" onclick="return confirm ('Apakah anda yakin menghapus data ini')" class="btn btn-danger">Delete</a>
