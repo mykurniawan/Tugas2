@@ -13,7 +13,7 @@ if ($_POST) {
     } else {
         include "koneksi.php";
         $insert = mysqli_query($conn, "INSERT INTO t_mahasiswa (nama, nim, alamat, username, password)
-        value (' " . $nama . " ',' " . $nim . " ',' " . $alamat . " ','" . $username . "','" . $password . "')") or die(mysqli_error($koneksi));
+        value (' " . $nama . " ',' " . $nim . " ',' " . $alamat . " ','" . $username . "','" . $password . "')") or die(mysqli_error($conn));
 
         if ($insert) {
             echo "<script>alert('Sukses menambahkan data mahasiswa');location.href='dataMhs.php'</script>";
